@@ -1,5 +1,6 @@
 trunk
 .c9revisions
+build/bin/*
 src/require.js
 node_modules
 tmp/*

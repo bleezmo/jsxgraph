@@ -148,7 +148,6 @@ define([
 
             return renderer;
         },
-
         /**
          * Initialise a new board.
          * @param {String} box Html-ID to the Html-element in which the board is painted.
@@ -166,14 +165,14 @@ define([
          * </ul>
          * @returns {JXG.Board} Reference to the created board.
          */
-        initBoard: function (box, attributes) {
+        initBoard: function (box, attributes, dim) {
             var originX, originY, unitX, unitY,
                 renderer,
                 w, h, dimensions,
                 bbox, attr, axattr,
                 board;
 
-            dimensions = Env.getDimensions(box);
+            dimensions = dim?dim:Env.getDimensions(box);
             attributes = attributes || {};
 
             // merge attributes
